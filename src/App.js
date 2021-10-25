@@ -1,4 +1,5 @@
 import FilterPanel from "./components/filterPanel";
+import JobCard from "./components/jobCard";
 
 function App() {
   const filterList = ["Frontend", "Senior", "HTML", "JavaScript"]
@@ -9,6 +10,7 @@ function App() {
 
       <div className="mx-6 mb-9">
         <FilterPanel filterList={filterList}/>
+        <JobCard/>
       </div>
 
     </div>
