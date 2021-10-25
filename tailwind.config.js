@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: {
     enabled: false,
@@ -19,6 +21,12 @@ module.exports = {
          700: 'var(--color-neutral-700)',
        }
       },
+      fontFamily: {
+        sans: [
+          'Spartan',
+          ...defaultTheme.fontFamily.sans,
+        ]
+      }
     },
   },
   variants: {
