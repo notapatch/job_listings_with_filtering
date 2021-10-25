@@ -1,3 +1,22 @@
+
+:root {
+  /* Primary*/
+  --color-primary-200: hsl(180, 29%, 50%);  /* #5BA4A4 - Dark cyan (Featured highlight, Clear text, Filter text */
+
+  /* hsl reference reminders */
+  --color-white:       hsl(0, 100%, 100%);
+  /* --color-black:       hsl(0, 100%, 0%); */
+
+  /* Neutral */
+  --color-neutral-200: hsl(180, 52%, 96%);  /* #EFFAFA - Light Grayish Cyan (Bg shadow?)  */
+  --color-neutral-300: hsl(180, 31%, 95%);  /* #EEF6F6 - Light Grayish Cyan (Filter Tablets)  */
+  --color-neutral-400: hsl(180, 28%, 95%);  /* #EFF6F6 - Light Grayish Cyan (Filter Tablets bg)  */
+  --color-neutral-500: hsl(180, 10%, 74%);  /* #B6C3C3 - Dark Grayish Cyan (Horizontal line and dots) */
+  --color-neutral-600: hsl(180,  8%, 52%);  /* #7B8E8E - Dark Grayish Cyan (Job text data 1d ago) */
+  --color-neutral-700: hsl(180, 14%, 20%);  /* #2C3A3A - Very Dark Grayish Cyan (Text) */
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
