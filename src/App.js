@@ -10,10 +10,21 @@ function App() {
 
       <div className="mx-6 mb-9">
         <FilterPanel filterList={filterList}/>
+
         <JobCard
+          knew={true}
           featured={true}
         />
         <JobCard
+          knew={true}
+          featured={false}
+        />
+        <JobCard
+          knew={false}
+          featured={true}
+        />
+        <JobCard
+          knew={false}
           featured={false}
         />
       </div>
