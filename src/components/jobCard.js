@@ -1,10 +1,22 @@
 import photosnap from "../images/photosnap.svg";
+import {classNames} from "../utils/ClassNames";
+import BadgeFeatured from "./badgeFeatured";
 
-const JobCard = ({}) => {
+const JobCard = ({featured}) => {
+  let featuredBadge
+  if (featured) {
+    featuredBadge = <BadgeFeatured/>
+  }
   return(
-    <div className="mt-10 bg-white p-6 rounded shadow-md flex flex-col lg:flex-row lg:justify-between">
-      <div>
-        <img className="-mt-12 h-12 w-12" src={photosnap} alt="logo"/>
+    <div className={
+      classNames(
+        "mt-10 bg-white p-6 rounded shadow-md flex flex-col lg:flex-row lg:justify-between",
+        featured ? "border-l-4 border-primary-200" : ""
+      )
+    }
+    >
+    <div>
+      <img className="-mt-12 h-12 w-12" src={photosnap} alt="logo"/>
         <div className="mt-3 flex items-center">
           <h3 className="text-sm font-bold text-primary-200 items-center">
             Photosnap
@@ -12,9 +24,7 @@ const JobCard = ({}) => {
           <span className="ml-4 inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-bold bg-primary-200 text-white">
             NEW!
           </span>
-          <span className="ml-2 inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-bold bg-neutral-700 text-white">
-            FEATURED
-          </span>
+          { featuredBadge }
         </div>
         <div className="mt-2 text-lg text-neutral-700 hover:text-primary-200 font-bold">
           {"Senior Frontend Developer"}

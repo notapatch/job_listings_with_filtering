@@ -10,7 +10,12 @@ function App() {
 
       <div className="mx-6 mb-9">
         <FilterPanel filterList={filterList}/>
-        <JobCard/>
+        <JobCard
+          featured={true}
+        />
+        <JobCard
+          featured={false}
+        />
       </div>
 
     </div>
