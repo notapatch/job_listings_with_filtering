@@ -7,6 +7,9 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    boxShadow: {
+      'md': '0px 4px 4px hsl(0, 0%, 0%, .25)',
+    },
     extend: {
       colors: {
        primary: {
