@@ -16,16 +16,22 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
   return(
     <div className={
       classNames(
-        "mt-10 bg-white p-6 rounded shadow-md flex flex-col lg:flex-row lg:justify-between",
+        "mt-10 bg-white p-6 rounded shadow-md flex flex-col justify-right lg:flex-row lg:justify-between",
         featured ? "border-l-4 border-primary-200" : ""
       )
     }
     >
+
+      {/*section 1*/}
       <div>
-        <img className="-mt-12 h-12 w-12"
+        <img className="-mt-12 lg:mt-auto h-12 lg:h-22 w-12 lg:w-22 "
           src={process.env.PUBLIC_URL + logo}
           alt={`${company} company logo`}
         />
+      </div>
+
+      {/*section 2*/}
+      <div className="lg:ml-8 lg:flex-1">
         <div className="mt-3 flex items-center">
           <h3 className="text-sm font-bold text-primary-200 items-center">
             {company}
@@ -45,7 +51,9 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
         </div>
         <hr className="mt-4 lg:hidden"/>
       </div>
-      <div className="bg-white flex items-center rounded">
+
+      {/*section 3*/}
+      <div className="lg:flex-1 lg:justify-end bg-white flex items-center rounded">
         <div className="mt-5 flex flex-wrap content-start gap-4">
           {jobFilterList.map(filter =>
             <div
