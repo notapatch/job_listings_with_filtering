@@ -34,6 +34,10 @@ module.exports = {
           'Spartan',
           ...defaultTheme.fontFamily.sans,
         ]
+      },
+      spacing: {
+        22: '5.5rem',      // width and height of company images
+        156: '9.75rem',    // height of header
       }
     },
     fontSize: {
