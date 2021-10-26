@@ -11,6 +11,11 @@ module.exports = {
       'md': '0px 4px 4px hsl(0, 0%, 0%, .25)',
     },
     extend: {
+      backgroundImage: {
+       'header-desktop': "url('./images/bg-header-desktop.svg')",
+       'header-mobile': "url('./images/bg-header-mobile.svg')",
+       'icon-remove': "url('./images/icon-remove.svg')",
+      },
       colors: {
        primary: {
          200: 'var(--color-primary-200)',
