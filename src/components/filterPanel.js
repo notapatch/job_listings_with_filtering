@@ -1,7 +1,7 @@
 import Filter from "./filter";
 
-function FilterPanel() {
-  const filterList = ["Frontend", "Senior", "HTML", "JavaScript"]
+function FilterPanel({filterList}) {
+
   return(
     <div className="bg-white -mt-9 flex justify-between items-center rounded mx-6 shadow-md">
       <div className="m-5 flex flex-wrap content-start gap-4">
