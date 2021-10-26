@@ -1,4 +1,3 @@
-import photosnap from "../images/photosnap.svg";
 import {classNames} from "../utils/ClassNames";
 import BadgeFeatured from "./badgeFeatured";
 import BadgeNew from "./badgeNew";
@@ -25,7 +24,7 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
       {/*section 1*/}
       <div>
         <img className="-mt-12 lg:mt-auto h-12 lg:h-22 w-12 lg:w-22 "
-          src={process.env.PUBLIC_URL + logo}
+          src={logo}
           alt={`${company} company logo`}
         />
       </div>

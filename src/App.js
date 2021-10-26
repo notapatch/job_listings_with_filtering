@@ -1,7 +1,7 @@
 import {useState} from "react";
 import FilterPanel from "./components/filterPanel";
 import JobCard from "./components/jobCard";
-import data from  "./data/data.json"
+import { data } from "./data/data.js"
 
 function App() {
   const [jobs] = useState(data);
