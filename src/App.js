@@ -11,12 +11,16 @@ function App() {
     setFilterList(oldFilterList => [...new Set([...oldFilterList, jobFilter])])
   }
 
+  function handleRemoveFilter(jobFilter) {
+    setFilterList(filterList.filter((item) => (item !== jobFilter)))
+  }
+
   return (
     <div className="App">
       <header className="h-156 bg-primary-200 bg-header-mobile sm:bg-header-desktop" />
 
       <div className="mx-6 mb-9">
-        <FilterPanel filterList={filterList}/>
+        <FilterPanel filterList={filterList} handleRemoveFilter={handleRemoveFilter}/>
 
         {jobs.map((job) =>
           <JobCard
