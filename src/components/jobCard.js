@@ -2,7 +2,7 @@ import {classNames} from "../utils/ClassNames";
 import BadgeFeatured from "./badgeFeatured";
 import BadgeNew from "./badgeNew";
 
-const JobCard = ({company, logo, knew, featured, position, jobFilterList, postedAt, contract, location}) => {
+const JobCard = ({company, logo, knew, featured, position, jobFilterList, postedAt, contract, location, handleAddFilter}) => {
   let featuredBadge
   if (featured) {
     featuredBadge = <BadgeFeatured/>
@@ -57,7 +57,9 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
           {jobFilterList.map(filter =>
             <div
               key={filter}
-              className="p-2 self-center text-sm font-bold text-primary-200 hover:text-white bg-neutral-400 hover:bg-primary-200 rounded">
+              className="p-2 self-center text-sm font-bold text-primary-200 hover:text-white bg-neutral-400 hover:bg-primary-200 rounded"
+              onClick={() => handleAddFilter(filter)}
+            >
               {filter}
             </div>
           )}

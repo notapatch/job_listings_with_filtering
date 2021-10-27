@@ -5,7 +5,11 @@ import { data } from "./data/data.js"
 
 function App() {
   const [jobs] = useState(data);
-  const filterList = ["Frontend", "Senior", "HTML", "JavaScript"]
+  const [filterList, setFilterList] = useState([])
+
+  function handleAddFilter(jobFilter) {
+    setFilterList(oldFilterList => [...new Set([...oldFilterList, jobFilter])])
+  }
 
   return (
     <div className="App">
@@ -26,6 +30,7 @@ function App() {
             postedAt={job.postedAt}
             contract={job.contract}
             location={job.location}
+            handleAddFilter={handleAddFilter}
           />
         )}
       </div>
