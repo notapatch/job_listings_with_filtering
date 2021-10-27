@@ -1,6 +1,6 @@
 import Filter from "./filter";
 
-function FilterPanel({filterList, handleRemoveFilter}) {
+function FilterPanel({filterList, handleRemoveFilter, handleClearFilter}) {
 
   return(
     <div className="bg-white -mt-9 flex justify-between items-center rounded mx-6 shadow-md">
@@ -12,6 +12,7 @@ function FilterPanel({filterList, handleRemoveFilter}) {
 
       <div
         className="m-6 text-sm font-bold text-neutral-600 hover:text-primary-200 hover:underline"
+        onClick={handleClearFilter}
       >
         Clear
       </div>
