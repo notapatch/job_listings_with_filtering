@@ -19,6 +19,12 @@ function App() {
     setFilterList([])
   }
 
+  const filteredJobs = jobs.filter(job => {
+    return (
+      filterList.every(filter => [job.role, job.level, ...job.languages].includes(filter))
+    )
+  })
+
   return (
     <div className="App">
       <header className="h-156 bg-primary-200 bg-header-mobile sm:bg-header-desktop" />
@@ -28,7 +34,7 @@ function App() {
           <FilterPanel filterList={filterList} handleRemoveFilter={handleRemoveFilter} handleClearFilter={handleClearFilter}/>
         </div>
 
-        {jobs.map((job) =>
+        {filteredJobs.map((job) =>
           <JobCard
             id={job.id}
             company={job.company}
