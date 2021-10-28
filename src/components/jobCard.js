@@ -3,15 +3,7 @@ import BadgeFeatured from "./badgeFeatured";
 import BadgeNew from "./badgeNew";
 
 const JobCard = ({company, logo, knew, featured, position, jobFilterList, postedAt, contract, location, handleAddFilter}) => {
-  let featuredBadge
-  if (featured) {
-    featuredBadge = <BadgeFeatured/>
-  }
 
-  let knewBadge
-  if (knew) {
-    knewBadge = <BadgeNew/>
-  }
   return(
     <div className={
       classNames(
@@ -35,8 +27,8 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
           <h3 className="text-sm font-bold text-primary-200 items-center">
             {company}
           </h3>
-          {knewBadge}
-          {featuredBadge}
+          {featured ? <BadgeFeatured/> : null }
+          {knew ? <BadgeNew/> : null }
         </div>
         <div className="mt-2 text-lg text-neutral-700 hover:text-primary-200 font-bold">
           {position}
