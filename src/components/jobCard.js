@@ -45,18 +45,20 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
 
       {/*section 3*/}
       <div className="lg:flex-1 lg:justify-end bg-white flex items-center rounded">
-        <div className="mt-5 flex flex-wrap content-start gap-4">
+        <ul className="mt-5 flex flex-wrap content-start gap-4">
           {jobFilterList.map(filter =>
-            <div
-              key={filter}
-              className="p-2 self-center text-sm font-bold text-primary-200 hover:text-white bg-neutral-400 hover:bg-primary-200 rounded"
-              onClick={() => handleAddFilter(filter)}
-            >
-              {filter}
-            </div>
+            <li key={filter} >
+              <button
+                className="p-2 self-center text-sm font-bold text-primary-200 hover:text-white bg-neutral-400 hover:bg-primary-200 rounded"
+                onClick={() => handleAddFilter(filter)}
+              >
+                {filter}
+              </button>
+            </li>
           )}
-        </div>
+        </ul>
       </div>
+
     </div>
   )
 }
