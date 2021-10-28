@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <header className="h-156 bg-primary-200 bg-header-mobile sm:bg-header-desktop" />
 
-      <div className="mx-6 mb-9">
+      <div className="mx-auto px-6 mb-9 max-w-277.5">
         <div className={!filterList.length ? "hidden" : "" }>
           <FilterPanel filterList={filterList} handleRemoveFilter={handleRemoveFilter} handleClearFilter={handleClearFilter}/>
         </div>
