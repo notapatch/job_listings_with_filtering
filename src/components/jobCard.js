@@ -24,9 +24,9 @@ const JobCard = ({company, logo, knew, featured, position, jobFilterList, posted
       {/*section 2*/}
       <div className="lg:ml-8 lg:flex-1">
         <div className="mt-3 flex items-center">
-          <h3 className="text-sm font-bold text-primary-200 items-center">
+          <h1 className="text-sm font-bold text-primary-200 items-center">
             {company}
-          </h3>
+          </h1>
           {featured ? <BadgeFeatured/> : null }
           {knew ? <BadgeNew/> : null }
         </div>
