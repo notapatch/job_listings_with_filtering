@@ -35,6 +35,9 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
+      maxWidth: {
+        '277.5': '69.375rem',  // max width of header
+      },
       spacing: {
         22: '5.5rem',      // width and height of company images
         156: '9.75rem',    // height of header
